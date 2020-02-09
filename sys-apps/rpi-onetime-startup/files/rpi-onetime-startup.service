@@ -1,0 +1,14 @@
+#/etc/systemd/system/rpi-onetime-startup.service
+[Unit]
+Description=rpi-onetime-startup
+ 
+[Service]
+Type=oneshot
+ConditionFirstBoot=true
+Type=simple
+ExecStart=/bin/bash /boot/startup.sh
+#ExecStart=/boot/EFI/startup.sh #if I could add Grub Boot/efi.... to a mod image I would would make kernels more swapable. move many /boot to /boot/efi to init pi , let grub do rest. 
+## Stub hear if ppl want template
+ 
+[Install]
+WantedBy=multi-user.target
