@@ -1,6 +1,2 @@
-# drops exo-1, which is required by xfce4-panel
-=xfce-base/exo-0.12.5-r100
-# does not provide pkgconfig (exo-1.pc) file, which some
-# packages which depend on it use during configure
->=xfce-base/exo-0.12.6
-
+# missing default apps etc in panel
+>=xfce-base/exo-4.15
